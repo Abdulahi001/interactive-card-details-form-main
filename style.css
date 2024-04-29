@@ -1,0 +1,461 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+/*
+## Colors
+
+### Primary
+
+- Linear gradient (active input border): hsl(249, 99%, 64%) to hsl(278, 94%, 30%)
+- Red (input errors): hsl(0, 100%, 66%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Light grayish violet: hsl(270, 3%, 87%)
+- Dark grayish violet: hsl(279, 6%, 55%)
+- Very dark violet: hsl(278, 68%, 11%)
+*/
+
+:root{
+    --linear-gradient:hsl(249, 99%, 64%) to hsl(278, 94%, 30%);
+    --red:#ff5252;
+    --light-garyish-violet:hsl(279, 6%, 55%);
+    --dark-grayish-violet:#8e8593;
+    --very-dark-violet:hsl(278, 68%, 11%);
+}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+body{
+    height: 100vh;
+    background: url(bg-main-desktop.png) no-repeat;
+    place-content: center;
+    main{
+        width: 80%;
+        margin: auto;
+     padding-right:px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+       
+        .card-information{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .card-info{
+                
+                
+                background: url(bg-card-front.png) no-repeat;
+                background-size: 350px;
+                height: 195px;
+                width: 350px;
+                margin-bottom: 30px;
+                
+                .logo{
+                  width: 80%;
+                  margin: auto;
+                  height: 70px;
+                  margin-bottom: 45px;
+                    display: flex;
+                    align-items: center;
+                    .circle{
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        background-color: white;
+                        margin-right: 10px;
+                    }
+                    .white-circle{
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        border: 1px solid white;
+                    }
+                }
+                .info{
+                    width: 80%;
+                    margin: auto;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    .number-output{
+                        display: inline-block;
+                        margin-bottom: 15px;
+                        text-align: center;
+                        font-size: 22px;
+                        color: #fff;
+                        letter-spacing: 1px;
+                    }
+                    .name-date{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        span{
+                            display: inline-block;
+                            color: #fff;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+            .card-cvc{
+                margin-left: 200px;
+                background: url(bg-card-back.png) no-repeat;
+                
+                background-size: 350px;
+                height: 195px;
+                width: 350px; 
+                position: relative;
+                span{
+                    display: inline-block;
+                    position: absolute;
+                    right: 50px;
+                    top: 85px;
+                    color: white;
+                }
+            }
+        }
+        .complete{
+            width: 300px;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-right: 120px;
+            margin-bottom: 50px;
+         text-align: center;
+            img{
+                width: 65px;
+                margin-bottom: 20px;
+            }
+            h1{
+                text-transform: uppercase;
+                font-size:25px;
+                font-weight: 500;
+                letter-spacing: 2px;
+                margin-bottom: 10px;
+            }
+            p{
+                font-size: 14px;
+                margin-bottom: 50px;
+                color:var(--dark-grayish-violet)
+            }
+            button{
+                width: 100%;
+                padding: 13px 0;
+                border: none;
+                border-radius: 5px;
+                background-color: var(--very-dark-violet);
+                color: white;
+                cursor: pointer;
+            }
+        }
+        
+
+        .form{
+            
+           
+            width: 25%;
+            margin-right: 110px;
+            .error{
+                display: inline-block;
+                color: var(--red);
+                font-size: 10px;
+            }
+            input{
+                color: var(--very-dark-violet);
+                font-weight: 500;
+                position: relative;
+                
+            }
+       
+          
+
+            div{
+                margin: 10px 0;
+            }
+            .name,.number{
+                width: 100%;
+                p{
+                    font-size: 10px;
+                    text-transform: uppercase;
+                    color: var(--very-dark-violet);
+                    font-weight: 500;
+                }
+                input{
+                    width: 90%;
+                    padding: 7px 10px;
+                    margin-top: 3px;
+                    border: 1px solid var(--light-garyish-violet);
+                    border-radius: 4px;
+                }
+            }
+            .number{
+                #number-error{
+                    
+                }
+            }
+            .exp-date-cvc{
+                display: flex;
+               
+                
+                width: 94%;
+                .exp-date{
+                    width: 50%;
+                    margin-right:10px ;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    p{
+                        font-size: 10px;
+                        text-transform: uppercase;
+                        color: var(--very-dark-violet);
+                        font-weight: 500;
+                    }
+                  .date-inp{
+                    display: flex;
+                    position: relative;
+                    
+                  
+                    input{
+                        width: 40px;
+                        padding: 7px 5px;
+                        border: 1px solid var(--light-garyish-violet);
+                        border-radius: 5px;
+                        margin-right: 10px;
+                        
+                    }
+                    #date-error{
+                        
+                        display: inline-block;
+                        position: absolute;
+                        bottom: -20px;
+                        
+                    }
+                  }
+                }
+
+                .cvc{
+                    width: 67%;
+                    p{
+                        font-size: 10px;
+                        text-transform: uppercase;
+                        color: var(--very-dark-violet);
+                        font-weight: 500;
+                        margin-bottom:10px;
+                    }
+                    input{
+                        width:120px;
+                        padding: 7px 5px;
+                        border: 1px solid var(--light-garyish-violet);
+                        border-radius: 5px;
+                    }
+                }
+            }
+            button{
+                width: 100%;
+                padding: 13px 0;
+                border: none;
+                border-radius: 5px;
+                background-color: var(--very-dark-violet);
+                color: white;
+                cursor: pointer;
+            }
+        }
+    }
+    .hide{
+        display: none;
+    }
+}
+
+
+@media(max-width: 1350px) and (min-width:850px) {
+    body{
+        background-image: url(bg-main-desktop.png);
+        background-size: 400px;
+        main{
+           
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            .card-information{
+                margin-left: -10px;
+                .card-info{
+                    background-size: 300px;
+                    margin-left: 75px;
+                    .info{
+                        margin-top: -10px;
+                        margin-left: 5px;
+                        display: flex;
+                        flex-direction: column;
+                        
+                        
+                        .number-output{
+                            font-size: 20px;
+                            margin-bottom: 8px;
+                            margin-left: 43px;
+                        }
+                    }
+                   
+                }
+                .card-cvc{
+                    background-size: 300px;
+                    position: relative;
+                    span{
+                        position: absolute;
+                        right: 100px;
+                        top: 75px;
+                    }
+                }
+            }
+            .form{
+                margin-right: 90px;
+                .exp-date-cvc{
+                    .exp-date{
+                        p{
+                            font-size: 8px;
+                        } 
+                        .date-inp{
+                           
+                            input{
+                                width: 50%;
+                                margin-right: 5px;
+                            }
+                        }
+                      
+                    }
+                    .cvc{
+                        input{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+          
+        }
+    }
+   
+}
+
+
+@media (max-width:550px) {
+    body{
+        background-image: url(bg-main-mobile.png);
+        background-repeat: repeat-x;
+        background-size: 320px;
+       
+        height: 100vh;
+        overflow-x: hidden;
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            width: 100%;
+           height: 80%;
+          
+            
+            .card-information{
+                
+            height: 280px;
+               
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: start;
+                flex: 1;
+            
+                
+                .card-info{
+                    
+                    background-size: 255px;
+                    width: 260px;
+                    height: 190px;
+                    margin-top: -110px;
+                    margin-right: 70px;
+                    z-index: 11;
+                    position: relative;
+                    .info{
+                        position:absolute;
+                        top: 80px;
+                        left: 20px;
+                        .number-output{
+                            font-size: 16px;
+                            margin-left: 10px;
+                            margin-bottom: 10px;
+                        }
+                    }
+                    
+                }
+                .card-cvc{
+                    margin-right: 50px;
+                    background-size: 250px;
+                    width: 250px;
+                    height: 200px;
+                    margin-left: 100px;
+                    position: relative;
+                    span{
+                        position: absolute;
+                        top: 59px;
+                        right: 40px;
+                    }
+                   
+                }
+            }
+            .complete{
+                
+                width: 80%;
+                margin: auto;
+                text-align: center;
+                
+              
+            }
+            .form{
+                
+                flex:1;
+               width: 80%;
+               margin: auto;
+              
+               
+               .name,.number{
+                margin: 10px 0;
+                input{
+                   padding: 12px 5px;
+                   
+                }
+              
+               }
+               .exp-date-cvc{
+                .exp-date{
+                    .date-inp{
+                        input{
+                            padding: 12px 5px;
+                        }
+                    }
+                   
+                }
+                   
+                    .cvc{
+                        input{
+                            padding: 12px 5px;
+                            width: 90%;
+                            
+                        }
+                    }
+                    
+                  
+               }
+               button{
+                padding: 15px 0;
+                width: 94%;
+               }
+            }
+        }
+    }
+}
